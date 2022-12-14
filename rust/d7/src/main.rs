@@ -1,4 +1,5 @@
 use std::fs;
+use std::env;
 use std::collections::HashMap;
 
 struct Node{
@@ -34,6 +35,7 @@ impl Node{
 
 fn main() {
     let path = "/home/ebrodsky/aoc2022/d7/input.txt";
+    let path = env::current_dir().unwrap().to_str().unwrap().to_string() + "../input.txt";
 }
 
 fn part_one(file_path: &str) -> i32{
